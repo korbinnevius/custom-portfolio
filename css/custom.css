@@ -115,17 +115,71 @@ header{
 
 }
 
-.glowing-border{
-    --gradient-glow: #6412df, rgba(139, 1, 244, 0.6), #560ac1, #be8eff, #6412df, #6412df;
+@property --clr-1 {
+    syntax:'<color>';
+    initial-value: #6412df;
+    inherits: true;
+}
+@property --clr-2 {
+    syntax:'<color>';
+    initial-value: #8B01F499;
+    inherits: true;
+}
+@property --clr-3 {
+    syntax:'<color>';
+    initial-value: #560ac1;
+    inherits: true;
+}
+@property --clr-4 {
+    syntax:'<color>';
+    initial-value: #be8eff;
+    inherits: true;
+}
+@property --clr-5 {
+    syntax:'<color>';
+    initial-value: #8f42e6;
+    inherits: true;
+}
+@property --clr-6 {
+    syntax:'<color>';
+    initial-value: #582ca1;
+    inherits: true;
+}
+@property --glow-deg {
+    syntax:'<angle>';
+    inherits: true;
+    initial-value: -90deg;
+}
 
-    border: 2px solid transparent;
+.glowing-border{
+    --gradient-glow:
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-6),
+    var(--clr-1)
+;
+    --gradient-colors: conic-gradient(from var(--glow-deg), var(--gradient-glow));
+    --border-width: 2px;
+
+    border: var(--border-width) solid transparent;
     border-radius: 50vw 50vw 50vw;
     /*border-left: 0;*/ /*to remove border*/
-    background: linear-gradient(Canvas 0 0) padding-box, conic-gradient(from -90deg, var(--gradient-glow)) border-box;
+    background: linear-gradient(Canvas 0 0) padding-box, var(--gradient-colors) border-box;
 
     position: relative;
     isolation: isolate;
 
+    animation: glow 10s infinite linear;
+
+}
+
+@keyframes glow {
+    100%{
+        --glow-deg: 270deg;
+    }
 }
 
 .glowing-border::before,
@@ -145,7 +199,7 @@ header{
 .glowing-border::after{
     z-index: -2;
     inset: -0.05rem;
-    background: conic-gradient(from -90deg, var(--gradient-glow));
+    background: var(--gradient-colors);
     filter: blur(.5rem);
     opacity: 0.5;
 
