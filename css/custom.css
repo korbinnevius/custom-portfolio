@@ -135,23 +135,26 @@ header{
     /*border: #f9f9f9;*/
     color: #cfcfcf;
     cursor: none;
-    padding: 10px 30px;
-    font-size: 1em;
+    border: none;
+    padding: 0.5rem 4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: all .15s;
-
 }
 
-.btn:hover{
+
+
+/*.btn:hover{
     transform: scale(0.98);
-}
+}*/
 
-.button-wrapper:hover::before{
-    background-color: #fff676;
+/*.button-wrapper:hover::before{*/
+/*    background-color: #fff676;*/
 
-}
+/*}*/
 
 .masthead-link-footer{
     color: rgb(69, 154, 255);
