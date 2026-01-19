@@ -19,17 +19,20 @@ body {
     background: linear-gradient(-45deg, #0e0e0e, #252525, #131313, #1e1e1e);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    overflow-y: auto;
+    /*width: 100%;
+    min-height: 100vw;*/ /*fix padding and maybe uncomment this*/
 }
 
 @keyframes gradient {
     0%{
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50%{
         background-position: 100% 50%;
     }
     100%{
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 
 }
@@ -119,11 +122,35 @@ header{
     color: rgba(255, 255, 255, 0.8);
 }
 
+/*causing alignment problems currently*/
+/*.button-wrapper{*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
 .btn{
-    color: #cfcfcf;
     /*background: #fbfbfb;*/
     /*border: #f9f9f9;*/
+    color: #cfcfcf;
     cursor: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .15s;
+
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
+
+.button-wrapper:hover::before{
+    background-color: #fff676;
+
 }
 
 .masthead-link-footer{
@@ -190,7 +217,8 @@ header{
     border: var(--border-width) solid transparent;
     border-radius: var(--border-radius);
     /*border-left: 0;*/ /*to remove border*/
-    background: linear-gradient(Canvas 0 0) padding-box, var(--gradient-colors) border-box;
+    background: linear-gradient(Canvas 0, Canvas 100%) padding-box, var(--gradient-colors) border-box;
+
 
     position: relative;
     isolation: isolate;
