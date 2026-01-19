@@ -10,6 +10,7 @@
 body,html {
     width: 100%;
     height: 200vh;
+    overflow-y: auto;
     /*background-color: #000000;*/
     /*background: rgb(19, 19, 19);*/
 }
@@ -225,4 +226,44 @@ header{
     background: var(--gradient-colors);
     filter: blur(.5rem);
     opacity: 0.5;
+}
+
+.carousel{
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+
+}
+
+.carousel-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    animation: carousel-spin 25s infinite linear;
+    padding-right: 5.45em;
+}
+
+.carousel-card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 2em;
+    background: #fff;
+    font-size: 3rem;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes carousel-spin {
+    from {
+        translate: 0;
+    }
+    to{
+        translate: -100%;
+    }
 }
