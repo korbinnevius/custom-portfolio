@@ -180,6 +180,7 @@ footer{
 
 }
 
+
 @property --clr-1 {
     syntax:'<color>';
     initial-value: #6412df;
