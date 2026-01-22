@@ -100,6 +100,7 @@ header{
     justify-content: center;
     align-items: center;
     background: transparent;
+
 }
 
 .masthead-link{
@@ -156,9 +157,22 @@ header{
 
 /*}*/
 
+footer{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw; /* full viewport width */
+    z-index: 2; /* ensure it stays above content */
+    text-align: center;
+    padding-top: 2em;
+}
+
 .masthead-link-footer{
-    color: rgb(69, 154, 255);
+    color: rgb(239, 239, 239);
     border-bottom: .25rem solid transparent;
+
 }
 
 .container{
