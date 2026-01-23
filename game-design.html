@@ -2,16 +2,14 @@
 <html lang="en" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <title>2D</title>
+    <title>Game Design</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/css/custom.css">
     <script src="/js/masonry.pkgd.min.js"></script>
-    <script src="/js/masonry-initial.js"></script>
-    <!--
-        <link href="../css/imagesLoaded.css" rel="stylesheet" type="text/css">
-    -->
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <!--<script src="/js/masonry-initial.js"></script>-->
 
     <style>
         .overlay-highlight{
@@ -51,6 +49,18 @@
 
     </style>
 
+    <script>
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry();
+        });
+    </script>
+
 </head>
 <body class="d-flex h-100 text-center">
 <div class="container d-flex w-100 h-100 mx-auto flex-column">
@@ -65,9 +75,8 @@
                 <a class="masthead-link fw-bold py-1 px-2" href="about.html">About</a>
                 <a class="masthead-link fw-bold py-1 px-2" href="resume.html">Resume</a>
                 <a class="masthead-link fw-bold py-1 px-2" href="3d.html">3D</a>
-                <a class="masthead-link fw-bold py-1 px-2 masthead-active" href="2d.html">2D</a>
-                <a class="masthead-link fw-bold py-1 px-2" href="game-design.html">Game Design</a>
-
+                <a class="masthead-link fw-bold py-1 px-2" href="2d.html">2D</a>
+                <a class="masthead-link fw-bold py-1 px-2 masthead-active" href="game-design.html">Game Design</a>
             </nav>
         </div>
     </header>
@@ -76,7 +85,7 @@
         <div class="grid-sizer"></div>
         <div class="grid-item">
             <a href="advanced-character.html" class="image-link">
-                <img src="/images/portfolio/adv-char/ADV_Char_2k.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
+                <img src="/images/portfolio/3d/adv-char/ADV_Char_2k.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
                 <div class="overlay-highlight">
                     <span class="image-name">Advanced Character</span>
                 </div>
@@ -85,7 +94,7 @@
 
         <div class="grid-item">
             <a href="dragon-slayer.html" class="image-link">
-                <img src="/images/portfolio/dragon-slayer/headerImage.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
+                <img src="/images/portfolio/3d/dragon-slayer/headerImage.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
                 <div class="overlay-highlight">
                     <span class="image-name">Dragon Slayer</span>
                 </div>
