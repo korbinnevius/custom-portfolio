@@ -333,7 +333,8 @@ footer{
 
 .grid-sizer,
 .grid-item{
-    width: 33.333%;
+    width: 32.876%;
+    margin:.1em;
 }
 
 .grid-item{
