@@ -4,12 +4,17 @@
     margin: 0;
     padding: 0;
     cursor: none;
+    box-sizing: border-box;
 
+}
+
+html{
+    overflow-y: scroll;
 }
 
 body,html {
     width: 100%;
-    height: 200vh;
+    height: auto;
     overflow-y: auto;
     /*background-color: #000000;*/
     /*background: rgb(19, 19, 19);*/
@@ -314,14 +319,14 @@ footer{
     }
 }
 
-*{ box-sizing: border-box; }
 
 .grid{
-    background: #DDD;
+    background: transparent;
+    /*position: relative;*/
 }
 
 .grid:after{
-    content: "";
+    content: '';
     display: block;
     clear: both;
 }
