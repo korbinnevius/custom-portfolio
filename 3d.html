@@ -8,10 +8,8 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/css/custom.css">
     <script src="/js/masonry.pkgd.min.js"></script>
-    <script src="/js/masonry-initial.js"></script>
-    <!--
-        <link href="../css/imagesLoaded.css" rel="stylesheet" type="text/css">
-    -->
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <!--<script src="/js/masonry-initial.js"></script>-->
 
     <style>
         .overlay-highlight{
@@ -50,6 +48,18 @@
           }
 
     </style>
+
+    <script>
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry();
+        });
+    </script>
 
 </head>
 <body class="d-flex h-100 text-center">
