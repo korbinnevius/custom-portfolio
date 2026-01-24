@@ -354,6 +354,21 @@ footer{
     isolation: isolate;
 }
 
+.holo-image{
+
+}
+
+.holo-border{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    border: 2px solid rgba(0, 255, 255, 0.9);
+    z-index: 3;
+}
+
+
+
 .holo-image img{
     /*position: relative;*/
     display: block;
