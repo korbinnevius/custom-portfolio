@@ -365,9 +365,60 @@ footer{
     opacity: 0;
     border: 2px solid rgba(0, 255, 255, 0.9);
     z-index: 3;
+    /*background: repeating-linear-gradient(*/
+    /*to right, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8) 2px,*/
+    /*transparent 3px,*/
+    /*transparent 4px);*/
 }
 
+.holo-border::before,
+.holo-border::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid
+}
 
+.holo-border::before{
+    border-color: rgba(255, 0, 255, 0.9);
+}
+
+.holo-border::after{
+    border-color: rgba(0, 255, 255, 1);
+}
+
+.image-link:hover .holo-border {
+    opacity: 1;
+    animation: borderJitter 0.25s infinite steps(2);
+}
+
+.image-link:hover .holo-border::before {
+    animation: borderSplitA 0.18s infinite;
+}
+
+.image-link:hover .holo-border::after {
+    animation: borderSplitB 0.22s infinite;
+}
+
+@keyframes borderJitter {
+    0% {transform: translate(0,0) scale(1)}
+    25% {transform: translate(-3px,2px) scale(1.03)}
+    50% {transform: translate(3px,-2px) scale(0.97)}
+    75% {transform: translate(-2px,-1px) scale(1.01)}
+    100% {transform: translate(0,0) scale(1)}
+}
+
+@keyframes borderSplitA {
+    0% {transform: translate(-4px,2px)}
+    50% {transform: translate(3px,-3px)}
+    100% {transform: translate(-2px,1px)}
+}
+
+@keyframes borderSplitB {
+    0% {transform: translate(3px,-2px)}
+    50% {transform: translate(-3px,2px)}
+    100% {transform: translate(2px,-1px)}
+}
 
 .holo-image img{
     /*position: relative;*/
@@ -388,16 +439,36 @@ footer{
 }
 
 .holo-image::before{
-    background: linear-gradient(120deg, rgba(16, 204, 228, 0.56), rgba(255, 0, 255, 0.6));
+    /*background: linear-gradient(120deg, rgba(16, 204, 228, 0.56), rgba(255, 0, 255, 0.6));
     mix-blend-mode: screen;
-    filter: blur(4px);
+    filter: blur(4px);*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: inherit;
+    mix-blend-mode: screen;
+    opacity: 0.4;
+    transform: translate(2px,0); /* red channel offset */
+    filter: drop-shadow(1px 0 rgba(255, 0, 0, 0.7));
 }
 
 .holo-image::after{
-    background: repeating-linear-gradient(rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px,
+    /*background: repeating-linear-gradient(rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px,
     transparent 2px, transparent 4px), rgba(0, 255, 0, 0.18);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: inherit;
+    mix-blend-mode: screen;
+    opacity: 0.4;
+    transform: translate(-2px,0); /* cyan/blue channel offset */
+    filter: drop-shadow(-1px 0 rgba(0, 255, 255, 0.73));
 }
+
+
 
 
 /*had holo image too*/
@@ -435,8 +506,6 @@ footer{
     opacity: 1;
     animation: noiseFLicker 0.15s infinite;
 }
-
-
 
 .holo-image:hover .scan-line{
     opacity: 1;
