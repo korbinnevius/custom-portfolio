@@ -26,6 +26,7 @@
         .image-name{
             color: #171717;
             font-size: 20px;
+            z-index: 5;
         }
 
         .image-link:hover .overlay-highlight {
@@ -35,28 +36,16 @@
         .image-link {
             position: relative;
             display: block;
+            overflow: hidden;
         }
 
-        /*.portfolio{*/
-        /*    flex-grow: 1; !* Fill available space *!*/
-        /*    margin-top: 1em;*/
-        /*    margin-bottom: 1em;*/
-        /*    width: 100vw;*/
-        /*  }*/
-
+        .portfolio{
+            flex-grow: 1; /* Fill available space */
+            margin-top: 1em;
+            margin-bottom: 1em;
+            width: 100vw;
+        }
     </style>
-
-    <script>
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: '.grid-sizer'
-        });
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress( function() {
-            $grid.masonry();
-        });
-    </script>
 
 </head>
 <body class="d-flex h-100 text-center">
@@ -84,8 +73,10 @@
         <div class="grid">
             <div class="grid-sizer"></div>
             <div class="grid-item">
-                <a href="advanced-character.html" class="image-link">
+                <a href="advanced-character.html" class="image-link holo-image">
                     <img src="/images/portfolio/3d/adv-char/ADV_Char_2k.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
+                    <div class="scan-line"></div>
+                    <div class="holo-border"></div>
                     <div class="overlay-highlight">
                         <span class="image-name">Advanced Character</span>
                     </div>
@@ -93,8 +84,10 @@
             </div>
 
             <div class="grid-item">
-                <a href="dragon-slayer.html" class="image-link">
+                <a href="dragon-slayer.html" class="image-link holo-image">
                     <img src="/images/portfolio/3d/dragon-slayer/headerImage.png" class="card-img-top" role="img" preserveAspectRatio="xMidYMid"/>
+                    <div class="scan-line"></div>
+                    <div class="holo-border"></div>
                     <div class="overlay-highlight">
                         <span class="image-name">Dragon Slayer</span>
                     </div>

@@ -8,6 +8,13 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/css/custom.css">
 
+    <style>
+        .image-left img{
+            border-radius: 50vw 0vw 50vw 50vw;
+            object-fit: cover;
+        }
+    </style>
+
 </head>
 <body class="d-flex h-100 text-center">
 <div class="container d-flex w-100 h-100 mx-auto flex-column">
@@ -30,12 +37,20 @@
     </header>
 
 
-
-
-
-
-
-
+    <main class="px-3"
+          style="padding-top: 6em; padding-bottom: 2em; display: flex; text-align: center; gap: 20px;">
+        <div class="image-left">
+            <img src="images/headshot.jpg" height="300" width="300" alt=""/>
+        </div>
+        <div class="about-description" style="text-align: left;">
+            <h1>About</h1>
+            <p class="lead">I'm Korbin Nevius, a graduate from Chatham University with a BA in Immerisve Media
+                and a minor in Graphic Design.</p>
+            <div>
+                <a href="resume.html" class="btn fw-bold px-0">Resume</a>
+            </div>
+        </div>
+    </main>
 
 
 
