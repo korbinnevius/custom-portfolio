@@ -504,7 +504,7 @@ footer{
 
 .holo-image:hover::after{
     opacity: 1;
-    animation: noiseFLicker 0.15s infinite;
+    animation: noiseFlicker 0.15s infinite;
 }
 
 .holo-image:hover .scan-line{
@@ -525,7 +525,7 @@ footer{
     100% {top: 120%}
 }
 
-@keyframes noiseFLicker {
+@keyframes noiseFlicker {
     0%{ opacity: 0.2;}
     50%{ opacity: 0.35;}
     100%{ opacity: 0.25;}
