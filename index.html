@@ -9,9 +9,53 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
+    <style>
+
+        /*body{*/
+        /*    margin: 0;*/
+        /*    background:*/
+        /*    linear-gradient(to bottom, transparent 0%, black 100%),*/
+        /*    url("images/home-image.jpg") no-repeat center center fixed;*/
+        /*    background-size: cover;*/
+        /*}*/
+        .home-image{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            max-height: 90%;
+        }
+
+        .home-image img{
+            width: 100%;
+            opacity: 40%;
+            object-fit: cover;
+
+            -webkit-mask-image: -webkit-linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 40%,
+            black 100%
+            );
+
+            mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 40%,
+            black 100%
+            )
+        }
+    </style>
+
 
 </head>
 <body class="d-flex h-100 text-center">
+<div class="home-image">
+    <img src="images/home-image.jpg">
+</div>
 <div class="container d-flex w-100 h-100 mx-auto flex-column">
     <header class="mb-auto header glowing-border"
             style="--border-radius: 0vw 0vw 0vw 0vw; --background-glow-color: rgb(7,7,7); --border-width: 1px;
@@ -30,7 +74,7 @@
     </header>
 
     <main class="px-3 text-center"
-          style="padding-top: 6em; padding-bottom: 2em;">
+          style="padding-top: 6em; padding-bottom: 2em; z-index: 5">
         <h1>Hi, I'm Korbin</h1>
         <p class="lead">I'm Korbin Nevius, a graduate from Chatham University with a BA in Immerisve Media
         and a minor in Graphic Design.</p>
