@@ -20,6 +20,10 @@ body,html {
     /*background: rgb(19, 19, 19);*/
 }
 
+@media (hover: none) and (pointer:coarse) {
+    .inner-cursor, .outer-cursor {display: none; }
+}
+
 body {
     background: linear-gradient(-45deg, #0e0e0e, #252525, #131313, #1e1e1e);
     background-size: 400% 400%;
