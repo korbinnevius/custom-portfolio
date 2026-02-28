@@ -336,6 +336,12 @@ footer{
     clear: both;
 }
 
+@media (max-width: 768px) {
+    .grid-sizer{
+        width: 24.3%;
+    }
+}
+
 .grid-sizer,
 .grid-item{
     width: 24.56%;
