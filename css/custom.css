@@ -336,11 +336,7 @@ footer{
     clear: both;
 }
 
-@media (max-width: 768px) {
-    .grid-sizer{
-        width: 24.3%;
-    }
-}
+
 
 .grid-sizer,
 .grid-item{
@@ -369,6 +365,12 @@ footer{
     max-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .grid-sizer{
+        width: 24%;
+    }
+}
+
 .image-link,
 .holo-image{
     position: relative;
@@ -377,9 +379,6 @@ footer{
     isolation: isolate;
 }
 
-.holo-image{
-
-}
 
 .holo-border{
     position: absolute;
