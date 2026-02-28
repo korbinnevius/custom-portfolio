@@ -21,7 +21,8 @@ body,html {
 }
 
 @media (hover: none) and (pointer:coarse) {
-    .inner-cursor, .outer-cursor {display: none; }
+    .inner-cursor, .outer-cursor {
+        display: none !important; }
 }
 
 body {
