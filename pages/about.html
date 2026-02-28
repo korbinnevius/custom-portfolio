@@ -16,6 +16,16 @@
             border-radius: 50vw 0vw 50vw 50vw;
             object-fit: cover;
         }
+
+        @media (max-width: 768px){
+            .about-description{
+                text-align: center;
+            }
+            main{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
     </style>
 
 </head>
@@ -40,7 +50,7 @@
 
 
     <main class="px-3"
-          style="padding-top: 6em; padding-bottom: 2em; display: flex; flex-wrap: wrap; justify-content:center; text-align: center; gap: 20px;">
+          style="padding-top: 6em; padding-bottom: 2em; display: flex; text-align: center; gap: 20px;">
         <div class="image-left">
             <img src="../images/headshot.jpg" style="width: 300px; max-width:100%; height: auto;" alt=""/>
         </div>
