@@ -20,7 +20,7 @@ body,html {
     /*background: rgb(19, 19, 19);*/
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
     .inner-cursor, .outer-cursor {
         display: none !important; }
 }
