@@ -26,6 +26,9 @@ body,html {
 @media (max-width: 768px), (hover: none) and (pointer: coarse) {
     .inner-cursor, .outer-cursor {
         display: none !important; }
+    .masthead-link{
+        font-size: .9em;
+    }
 }
 
 body {
