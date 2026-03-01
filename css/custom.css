@@ -118,7 +118,7 @@ header{
 
 .masthead-link{
     color: rgba(225, 0, 225, 0.9);
-    font-size: 18px;
+    font-size: 1.2em;
     /*border-bottom: .25rem solid transparent;*/
     text-decoration: none;
 }
