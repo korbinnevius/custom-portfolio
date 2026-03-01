@@ -578,7 +578,9 @@ footer{
     }
     .header h3{
         float: none !important;
-        text-align: center;
+        text-align: center !important;
+        width: 100% !important;
+        justify-content: center !important;
     }
 }
 
