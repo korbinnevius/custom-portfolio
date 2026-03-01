@@ -574,7 +574,11 @@ footer{
         font-size: 1rem;
     }
     .masthead-link{
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+    .header h3{
+        float: none !important;
+        text-align: center;
     }
 }
 
