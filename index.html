@@ -22,27 +22,20 @@
             max-height: 90%;
         }
 
-        .home-image img{
-            width: 100%;
-            max-width: 100%;
-            opacity: 40%;
-            object-fit: cover;
-            object-position: center;
+        .home-image {
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            width: 100vw;
+            height: 90%;
             overflow: hidden;
-
-            -webkit-mask-image: -webkit-linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 40%,
-            black 100%
-            );
-
-            mask-image: linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 40%,
-            black 100%
-            )
+            margin: 0;
+            padding: 0;
+            background: url('images/home-image.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.4;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
         }
     </style>
 
@@ -50,9 +43,7 @@
 
 </head>
 <body class="d-flex h-100 text-center">
-<div class="home-image">
-    <img src="images/home-image.jpg">
-</div>
+<div class="home-image"></div>
 <div class="container d-flex w-100 h-100 mx-auto flex-column">
     <header class="mb-auto header glowing-border"
             style="--border-radius: 0vw 0vw 0vw 0vw; --background-glow-color: rgb(7,7,7); --border-width: 1px;
