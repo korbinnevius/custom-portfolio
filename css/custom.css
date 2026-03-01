@@ -117,12 +117,14 @@ header{
 }
 
 .masthead-link{
-    color: rgb(240, 240, 240, .6);
-    border-bottom: .25rem solid transparent;
+    color: rgba(225, 0, 225, 0.9);
+    font-size: 18px;
+    /*border-bottom: .25rem solid transparent;*/
+    text-decoration: none;
 }
 
 .masthead-active{
-    color: #fff;
+    color: rgba(255, 69, 255, 0.9);
 }
 
 .masthead .masthead-link + .masthead-link{
@@ -133,7 +135,7 @@ header{
 .masthead-link:focus,
 .masthead-link-footer:hover,
 .masthead-link-footer:focus{
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 255, 255, 0.9);
 }
 
 /*causing alignment problems currently*/
@@ -184,7 +186,7 @@ footer{
 
 .masthead-link-footer{
     color: rgb(239, 239, 239);
-    border-bottom: .25rem solid transparent;
+    /*border-bottom: .25rem solid transparent;*/
 
 }
 
