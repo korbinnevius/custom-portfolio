@@ -263,6 +263,16 @@ footer{
     }
 }
 
+@keyframes border-glitch {
+    0%   { filter: blur(0.5rem) brightness(1); opacity: 0.5; }
+    92%  { filter: blur(0.5rem) brightness(1); opacity: 0.5; }
+    93%  { filter: blur(0.3rem) brightness(2); opacity: 0.9; }
+    94%  { filter: blur(0.5rem) brightness(1); opacity: 0.5; }
+    96%  { filter: blur(0.2rem) brightness(2.5); opacity: 1; }
+    97%  { filter: blur(0.5rem) brightness(1); opacity: 0.5; }
+    100% { filter: blur(0.5rem) brightness(1); opacity: 0.5; }
+}
+
 .glowing-border::before,
 .glowing-border::after{
     content: "";
@@ -284,6 +294,7 @@ footer{
     background: var(--gradient-colors);
     filter: blur(.5rem);
     opacity: 0.5;
+    animation: border-glitch 2s steps(1) infinite;
 }
 
 .carousel{
