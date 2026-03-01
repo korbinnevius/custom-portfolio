@@ -26,9 +26,6 @@ body,html {
 @media (max-width: 768px), (hover: none) and (pointer: coarse) {
     .inner-cursor, .outer-cursor {
         display: none !important; }
-    .masthead-link{
-        font-size: 12px;
-    }
 }
 
 body {
@@ -570,6 +567,15 @@ footer{
     0%{ opacity: 0.2;}
     50%{ opacity: 0.35;}
     100%{ opacity: 0.25;}
+}
+
+@media (max-width: 768px) {
+    h3{
+        font-size: 1rem;
+    }
+    .masthead-link{
+        font-size: .5rem;
+    }
 }
 
 
