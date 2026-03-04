@@ -1,15 +1,3 @@
-/**
- * transition.js — Video Page Transition
- * <script src="js/transition.js"></script> in <head>
- *
- * Plays your transition video over the page on load.
- * No black screen — page is visible underneath the whole time.
- *
- * Put your videos at:
- *   videos/transition.webm  (Chrome, Firefox)
- *   videos/transition.mov   (Safari fallback)
- */
-
 (function () {
 
     const WEBM = '../videos/transition.webm';
